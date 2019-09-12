@@ -157,6 +157,9 @@ h1 {
 p {
   font-size: 3rem;
 }
+h2 {
+  font-size: 4rem;
+}
 header {
   display: flex;
   flex-direction: column;
@@ -164,7 +167,7 @@ header {
   width: 100%;
   text-align: center;
   flex-direction: column-reverse;
-  font-size: 6rem;
+  font-size: 8rem;
   background: #cdcdcd;
 }
 header nav {
@@ -180,6 +183,7 @@ header nav a {
 @media (min-width: 500px) {
   header nav {
     flex-direction: row;
+    justify-content: flex-end;
     border: none;
   }
   header nav a {
@@ -193,13 +197,13 @@ header .social-media {
 }
 @media (min-width: 500px) {
   header {
-    flex-direction: row;
-    font-size: 2.25rem;
+    flex-flow: row nowrap;
+    font-size: 3rem;
     border: none;
   }
-}
-h2 {
-  font-size: 4rem;
+  header .social-media {
+    width: 20%;
+  }
 }
 #about {
   display: flex;
@@ -226,6 +230,32 @@ h2 {
 }
 #about .contact-button:hover {
   background: #000f1e;
+}
+@media (min-width: 500px) {
+  #about {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  #about * {
+    padding: 0.5em 0;
+  }
+  #about img {
+    max-width: 30%;
+  }
+  #about h1 {
+    font-size: 6rem;
+  }
+  #about div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    width: 70%;
+  }
+  #about h2 {
+    font-size: 4rem;
+  }
 }
 #skills {
   display: flex;
@@ -254,6 +284,15 @@ h2 {
 }
 #skills span {
   padding-left: 3rem;
+}
+@media (min-width: 500px) {
+  #skills .skills-about ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #skills .skills-about ul li {
+    width: 50%;
+  }
 }
 #employment {
   display: flex;
@@ -294,9 +333,23 @@ h2 {
   width: 25%;
   text-align: center;
 }
+@media (min-width: 500px) {
+  #employment {
+    padding: 0 10%;
+  }
+}
 #contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
   padding: 6em 8em;
   background: #cdcdcd;
+}
+#contact form {
+  width: 100%;
+  padding: 4em 0;
 }
 #contact input,
 #contact textarea {
