@@ -1,1 +1,373 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+body img {
+  width: 100%;
+  padding: 5%;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 8rem;
+}
+p {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 4rem;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  flex-direction: column-reverse;
+  font-size: 8rem;
+  background: #cdcdcd;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+header nav a {
+  padding: 0.5em;
+  border-top: 1px solid grey;
+}
+@media (min-width: 500px) {
+  header nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    border: none;
+  }
+  header nav a {
+    border: none;
+  }
+}
+header .social-media {
+  font-size: 8rem;
+  width: 100%;
+  padding: 0.5em;
+}
+@media (min-width: 500px) {
+  header {
+    flex-flow: row nowrap;
+    font-size: 3rem;
+    border: none;
+  }
+  header .social-media {
+    width: 20%;
+  }
+}
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 6em 8em;
+  background: grey;
+}
+#about * {
+  padding: 0.5em 0;
+}
+#about img {
+  max-width: 60%;
+}
+#about .contact-button {
+  padding: 1em 4em;
+  border: 1px solid black;
+  background: dodgerblue;
+  border-radius: 0.5em;
+  font-size: 4rem;
+  color: black;
+}
+#about .contact-button:hover {
+  background: #000f1e;
+}
+@media (min-width: 500px) {
+  #about {
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+  #about * {
+    padding: 0.5em 0;
+  }
+  #about img {
+    max-width: 30%;
+  }
+  #about h1 {
+    font-size: 6rem;
+  }
+  #about div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    width: 70%;
+  }
+  #about h2 {
+    font-size: 4rem;
+  }
+}
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 6em 8em;
+  background: #cdcdcd;
+}
+#skills .skills-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: initial;
+}
+#skills h1 {
+  padding-bottom: 0.25em;
+}
+#skills li {
+  padding: 2em;
+}
+#skills i {
+  font-size: 6rem;
+}
+#skills span {
+  padding-left: 3rem;
+}
+@media (min-width: 500px) {
+  #skills .skills-about ul {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #skills .skills-about ul li {
+    width: 50%;
+  }
+}
+#employment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 6em 8em;
+  background: grey;
+}
+#employment h1 {
+  padding-bottom: 0.5em;
+}
+#employment .job {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+  padding: 2em;
+}
+#employment .job .company {
+  font-size: 4rem;
+}
+#employment .job .duration {
+  font-size: 3rem;
+}
+#employment .job .title {
+  font-size: 3rem;
+}
+#employment .job .techStack {
+  font-size: 3rem;
+}
+#employment .job .col-1 {
+  width: 75%;
+  text-align: left;
+}
+#employment .job .col-2 {
+  width: 25%;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  #employment {
+    padding: 0 10%;
+  }
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 6em 8em;
+  background: #cdcdcd;
+}
+#contact form {
+  width: 100%;
+  padding: 4em 0;
+}
+#contact input,
+#contact textarea {
+  width: 75%;
+  font-size: 2rem;
+  margin: 0.5em 0;
+  font-family: inherit;
+  border-radius: 0.5em;
+}
+#contact .submit,
+#contact .reset {
+  border-radius: 0.5em;
+  font-size: 4rem;
+  padding: 0.5em;
+}
+#contact .submit {
+  background-color: dodgerblue;
+}
+#contact .reset {
+  background-color: grey;
+}
